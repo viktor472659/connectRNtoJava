@@ -10,7 +10,8 @@ import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
-import com.prodjWithJava.CustomToastPackage;
+import com.prodjwithjava.CustomToastPackage;
+import com.prodjwithjava.RCTWheelPickerPackage;
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost =
@@ -25,6 +26,7 @@ public class MainApplication extends Application implements ReactApplication {
       @SuppressWarnings("UnnecessaryLocalVariable")
       List<ReactPackage> packages = new PackageList(this).getPackages();
       packages.add(new CustomToastPackage());
+      packages.add(new RCTWheelPickerPackage());
       return packages;
     }
 

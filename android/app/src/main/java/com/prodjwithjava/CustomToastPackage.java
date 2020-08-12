@@ -1,4 +1,4 @@
-package com.prodjWithJava;
+package com.prodjwithjava;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;

@@ -1,4 +1,4 @@
-package com.prodjWithJava;
+package com.prodjwithjava;
 import  com.facebook.react.bridge.*;
 
 import android.widget.Toast;
@@ -38,8 +38,14 @@ public class ToastModule extends ReactContextBaseJavaModule {
   public void show(String message, int duration) {
     Toast.makeText(getReactApplicationContext(), message, duration).show();
   }
+
    @ReactMethod
     public void sum(int a, int b, Promise res) {
         res.resolve(a + b);
+    }
+
+    @ReactMethod
+    public void devide(double a, double b, Promise res) {
+        res.resolve(a - b);
     }
 }

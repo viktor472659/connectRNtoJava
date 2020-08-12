@@ -27,32 +27,33 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import ToastExample from './ToastExample';
+import WheelPickerAndroid from './src/NativeModules/WheelPickerAndroid';
 const showRes = async () => {
     const res = await ToastExample.sum(4, 5);
     alert(res);
 };
+const show = async () => {
+    alert(await ToastExample.devide(45, 5));
+}
 const App = () => {
     return (
         <>
-            <StatusBar barStyle="dark-content" />
-            <SafeAreaView>
-                <ScrollView
-                    contentInsetAdjustmentBehavior="automatic"
-                    style={styles.scrollView}>
-                    <Button
-                        title='click'
-                        onPress={ showRes }
-                    />
-                </ScrollView>
-            </SafeAreaView>
+            <View style={styles.container}>
+                <WheelPickerAndroid style={styles.wheelPicker} />
+            </View>
         </>
     );
 };
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
+    container: {
+        flex: 1,
+        width: '100%',
+    },
+    wheelPicker: {
+        width: '100%',
+        height: 200,
+    },
 });
 
 export default App;
